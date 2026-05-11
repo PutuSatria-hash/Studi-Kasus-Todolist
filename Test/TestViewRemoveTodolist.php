@@ -5,9 +5,9 @@ require_once __DIR__ . "/../View/ViewRemoveTodolist.php";
 require_once __DIR__ . "/../BusinessLogic/ShowTodolist.php";
 require_once __DIR__ . "/../BusinessLogic/AddTodolist.php";
 
-addTodolist("Eko");
-addTodolist("Kurniawan");
-addTodolist("Khannedy");
+addTodolist("Belajar PHP Dasar");
+addTodolist("Belajar PHP OOP");
+addTodolist("Belajar PHP Database");
 
 showTodolist();
 
