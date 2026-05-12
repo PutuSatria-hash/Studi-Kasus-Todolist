@@ -5,8 +5,6 @@
  */
 function addTodolist(string $todo)
 {
-    global $todolist;
-
-    $number = count($todolist) + 1;
-    $todolist[$number] = $todo;
+    $number = count($_SESSION['todolist']) + 1;
+    $_SESSION['todolist'][$number] = $todo;
 }

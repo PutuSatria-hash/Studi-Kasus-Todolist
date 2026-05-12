@@ -5,17 +5,15 @@
  */
 function removeTodolist(int $number): bool
 {
-    global $todolist;
-
-    if ($number > count($todolist)) {
+    if ($number > count($_SESSION['todolist'])) {
         return false;
     }
 
-    for ($i = $number; $i < count($todolist); $i++) {
-        $todolist[$i] = $todolist[$i + 1];
+    for ($i = $number; $i < count($_SESSION['todolist']); $i++) {
+        $_SESSION['todolist'][$i] = $_SESSION['todolist'][$i + 1];
     }
 
-    unset($todolist[count($todolist)]);
+    unset($_SESSION['todolist'][count($_SESSION['todolist'])]);
 
     return true;
 }
